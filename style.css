@@ -7,7 +7,7 @@ body {
 height: 100vh;
   width: 100vw;
   display: grid;
-  border: 1px black solid;
+  /*border: 1px black solid;*/
   
 }
 
@@ -25,7 +25,7 @@ height: 100vh;
   align-items: center;
   padding: 30px;
   max-height: 10%;
-  border: 1px black solid;
+  /*border: 1px black solid;*/
   background-color: white;
 }
 
@@ -38,6 +38,7 @@ height: 100vh;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 15%;
 }
 
 #search {
@@ -50,39 +51,23 @@ height: 100vh;
 .departurearrival {
     display: flex;
     flex-direction: column;
-   justify-content: space-around;
+    justify-content: space-around;
+    padding-bottom: 20%
 }
 
 .title {
     display: flex;
     flex-direction: column;
-    grid-row-start: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /*grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
-    grid-column-end: 13;
-
+    grid-column-end: 13;*/
 }
 
 .cartbooking {
     display: flex;
-}
-
-.right-side {
-  background-color: #ffffff;
-  padding: 5px;
-  width: 90%;
-  display: inline-block;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.left-side {
-  background-color: #ffffff;
-  padding: 5px;
-  width: 90%;
-  display: inline-block;
-  height: 100%;
-  border-radius: 10px;
 }
 
 h3 {
@@ -91,21 +76,29 @@ h3 {
 
 h5 {
   color: white;
+  font-weight: lighter;
 }
 
 #searchfound {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .logo {
    color: #68a593;
+   font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
 }
 
 #btn-search {
   background-color: #68a593;
+  color: white;
   padding: 5px;
+  margin-bottom: 20%;
   border: none;
   border-radius: 2px;
+  width: 100%;
 }
 
 #btn-cart{
@@ -113,6 +106,7 @@ h5 {
   border: none;
   background: none;
   margin: 15px;
+  font-size: 15px;
 }
 
 #btn-booking {
@@ -120,11 +114,11 @@ h5 {
   border: none;
   background: none;
   margin: 15px;
+  font-size: 15px;
 }
 
 .cartbooking {
   display: flex;
-
 }
 
 .body {
@@ -133,4 +127,33 @@ h5 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  overflow: hidden;
+}
+
+.left-side, .right-side {
+  background-color: #ffffff;
+  padding: 5px;
+  width: 90%;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 20%;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-around;*/
+}
+
+.train {
+  width: 50%;
+}
+
+#start {
+  margin-bottom: 20%;
+  width: 100%;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
