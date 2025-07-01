@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>Cart-TicketHack</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-cart.css" />
+    <title>TicketHack</title>
+  </head>
 
-<body>
-    <div id="container-cart">
+  <body>
+    <div id="container">
+      <!--contient l'intégralité de la page-->
+      <div class="cell" id="header">
+        <!--header de la page-->
+        <div id="logo-container">
+          <h4 class="logo">Tickethack</h4>
+        </div>
+        <div class="cartbooking">
+          <!--boutons header-->
+          <div id="cart">
+            <button type="button" id="btn-cart">Cart</button>
+          </div>
+          <div id="booking">
+            <button type="button" id="btn-booking">Bookings</button>
+          </div>
+        </div>
+      </div>
 
-    <div id="content-cart">
+      <div class="cell" id="content">
+        <!--contient le milieu de page-->
 
-      <div id="cart">
-        <p>My cart</p>
-        <div id="cart-container">
+        <div id="content-cart">
+          <div class="my-cart">
+            <!--coté gauche de la page-->
+            <p>My cart</p>
             <div class="row">
-          <div class="text-container">
-            <h6 class="trajet">Paris>Lyon</h6>
-            <h6 class="horaire">20:09</h6>
-            <h6 class="prix">103€</h6>
+              <div class="text-container">
+                <div>
+                  <p class="destination">Paris>Marseille</p>
+                </div>
+                <div>
+                  <p class="horaire">20:37</p>
+                </div>
+                <div>
+                  <p class="prix">107€</p>
+                </div>
+              </div>
+              <div class="croix">
+              <div id="delete">
+              <span class="delete">✖</span>
+              </div>
+              </div>
+            </div>
+            <div class="total">
+              <p class="totalprice">Total: 103€</p>
+              <button type="button" id="btn-purchase">Purchase</button>
+            </div>
           </div>
-          <span class="delete">✖</span>
-        </div>
-
-         <div class="row">
-          <div class="text-container">
-            <h6 class="trajet">Paris>Lyon</h6>
-            <h6 class="horaire">20:09</h6>
-            <h6 class="prix">103€</h6>
-          </div>
-          <span class="delete">✖</span>
-        </div>
-
-         <div class="row">
-          <div class="text-container">
-            <h6 class="trajet">Paris>Lyon</h6>
-            <h6 class="horaire">20:09</h6>
-            <h6 class="prix">103€</h6>
-          </div>
-          <span class="delete">✖</span>
         </div>
       </div>
-      </div>
-
-      <div class="total">
-        <p>Total : 230€</p>
-        <button type="button" id="btn-purchase">Purchase</button>
-      </div>
-
     </div>
-
-</body>
-
+  </body>
 </html>
