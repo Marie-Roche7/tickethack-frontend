@@ -1,13 +1,19 @@
 body {
-  background-color: #ffffff;
   margin: 0;
+  background-image: url("./images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 #container {
   height: 100vh;
   width: 100vw;
   display: grid;
-  /*border: 1px black solid;*/
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .cell {
@@ -22,9 +28,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  max-height: 10%;
-  /*border: 1px black solid;*/
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: white;
 }
 
@@ -40,18 +45,10 @@ body {
   padding-bottom: 15%;
 }
 
-#search {
-  display: flex;
-  flex-direction: column;
-  /*align-items: center;
-    justify-content: space-around;*/
-}
-
 .departurearrival {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-bottom: 20%;
 }
 
 .title {
@@ -59,33 +56,36 @@ body {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  /*grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 13;*/
 }
 
 .cartbooking {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
+h4 {
+  margin: 0;
+}
 h3 {
   color: white;
+  font-size: 25px;
 }
 
 h5 {
   color: white;
   font-weight: lighter;
+  font-size: 17px;
 }
 
 #searchfound {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 70%;
-
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-
 
 .logo {
   color: #68a593;
@@ -96,26 +96,23 @@ h5 {
 #btn-search {
   background-color: #68a593;
   color: white;
-  padding: 5px;
-  margin-bottom: 20%;
+  padding: 0px;
   border: none;
   border-radius: 2px;
-  width: 100%;
+  padding: 5px;
 }
 
 #btn-cart {
-  padding: 0;
+  padding: 0px;
   border: none;
   background: none;
-  margin: 15px;
   font-size: 15px;
 }
 
 #btn-booking {
-  padding: 0;
+  padding-left: 20px;
   border: none;
   background: none;
-  margin: 15px;
   font-size: 15px;
 }
 
@@ -123,32 +120,20 @@ h5 {
   display: flex;
 }
 
-.body {
-  background-image: url("./images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;
-}
-
 .left-side,
 .right-side {
   background-color: #ffffff;
-  padding: 5px;
-  width: 90%;
   display: inline-block;
   height: 300px;
-  width: 100%;
   border-radius: 10px;
-  padding-top: 20%;
-  /*display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;*/
+  justify-content: space-around;
 }
 
 .left-side {
-  padding: 25%;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .train {
@@ -156,15 +141,10 @@ h5 {
 }
 
 #start {
-  margin-bottom: 20%;
   width: 100%;
 }
 
 h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-}
-
-input {
-  width: 100%;
 }

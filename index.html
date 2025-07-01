@@ -8,67 +8,63 @@
   </head>
 
   <body>
-    <div class="body">
-      <div class="cell" id="container">
-        <div class="cell" id="header">
-          <div id="logo-container">
-            <h4 class="logo">Tickethack</h4>
-          </div>
-          <div class="cartbooking">
-            <div id="cart">
-              <button type="button" id="btn-cart">Cart</button>
-            </div>
-            <div id="booking">
-              <button type="button" id="btn-booking">Bookings</button>
-            </div>
-          </div>
+    <div id="container"> <!--contient l'intégralité de la page-->
+      <div class="cell" id="header"><!--header de la page-->
+        <div id="logo-container">
+          <h4 class="logo">Tickethack</h4>
         </div>
-
-        <div class="cell" id="content">
-          <div class="title">
-            <h3>Explore the world effortlessly by train!</h3>
-            <h5>
-              Compare, book and enjoy cheap prices for train tickets: your
-              journey starts on Tickethack.
-            </h5>
+        <div class="cartbooking"> <!--boutons header-->
+          <div id="cart">
+            <button type="button" id="btn-cart">Cart</button>
           </div>
-
-          <div id="searchfound">
-            <div id="search">
-              <div class="left-side">
-                <div class="departurearrival">
-                  <div>
-                    <input id="departure" type="text" placeholder="departure" />
-                  </div>
-                  <div>
-                    <input id="arrival" type="text" placeholder="arrival" />
-                  </div>
-                </div>
-
-                <input
-                  type="date"
-                  id="start"
-                  name="trip-start"
-                  value="2025-07-02"
-                  min="2025-07-02"
-                  max="2030-12-31"
-                />
-
-                <button type="button" id="btn-search">Search</button>
-              </div>
-            </div>
-
-            <div id="found">
-              <div class="right-side">
-                <div>
-                  <img class="train" src="./images/train.png" />
-                  <h6>It's time to book your future trip.</h6>
-                </div>
-              </div>
-            </div>
+          <div id="booking">
+            <button type="button" id="btn-booking">Bookings</button>
           </div>
         </div>
       </div>
+
+      <div class="cell" id="content"> <!--contient le milieu de page-->
+        <div class="title">
+          <h3>Explore the world effortlessly by train!</h3>
+          <h5>
+            Compare, book and enjoy cheap prices for train tickets: your journey
+            starts on Tickethack.
+          </h5>
+        </div>
+
+        <div id="searchfound">
+          <div class="left-side"><!--coté gauche de la page-->
+            <div class="departurearrival">
+              <div>
+                    <input id="departure" type="text" placeholder="Departure" />
+                  </div>
+                  <div>
+                    <input id="arrival" type="text" placeholder="Arrival" />
+                  </div>
+            </div>
+
+            <input
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2025-07-01"
+                  min="2025-07-01"
+                  max="2030-12-31"
+                />
+
+            <button type="button" id="btn-search">Search</button>
+          </div>
+
+          <div id="found">
+            <div class="right-side"> <!--coté droit de la page-->
+              <div>
+                  <img class="train" src="./images/train.png" />
+                  <h6>It's time to book your future trip.</h6>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div> <!--pas de footer!-->
     </div>
   </body>
 </html>
