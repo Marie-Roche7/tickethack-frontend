@@ -1,6 +1,6 @@
 document.querySelector('#logo-container').addEventListener('click',
   function () {
-   document.location.href = "index-main.html";
+   document.location.href = "index-main-page.html";
  }
 );
 

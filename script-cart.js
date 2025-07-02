@@ -1,10 +1,8 @@
 console.log("arrivee dans cart");
 
 fetch("url")
-.then()
-.then( data =>{
-
-})
+  .then()
+  .then((data) => {});
 
 const travels = [
   { departure: "Lyon", arrival: "Marseille", horaire: "13:50", prix: 111 },
@@ -52,10 +50,27 @@ const travels = [
   },
 ];
 
+
+function fetchNewArrayFromDB() { //J'aime les commentaires
+
+  fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+  .then(response => response.json())
+  .then(data => {
+    
+    for (let i = 0; i < data.trips; i++) {
+      console.log("Departure =>", data.trips.departure);
+      innertHTML += <> `${data.trips.departure}`</>
+    }
+  })
+}
+
+fetchNewArrayFromDB()
+
+
 document
   .querySelector("#logo-container")
   .addEventListener("click", function () {
-    document.location.href = "index-main.html";
+    document.location.href = "index-main-page.html";
   });
 
 document.querySelector("#btn-booking").addEventListener("click", function () {
@@ -72,18 +87,21 @@ function deleteTravel() {
   // for (let element of document.querySelectorAll('#delete')) {
   //   element.addEventListener("click", "tatata")
   // }
-
+//fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+//.then(response => response.json())
+//.then(data => {
   for (let i = 0; i < document.querySelectorAll("#delete").length; i++) {
     document
       .querySelectorAll("#delete")
       [i].addEventListener("click", function () {
-        fetch(`http://localhost:3000/.../${this.id}`, { method: "DELETE" })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.result) {
-              this.parentNode.parentNode.remove();
-            }
-          });
+        // fetch(`http://localhost:3000/.../${this.id}`, { method: "DELETE" })
+        //   .then((response) => response.json())
+        //   .then((data) => {
+        //     if (data.result) {
+        this.parentNode.parentNode.remove();
+        //     }
+        //   });
+        console.log("la mort");
       });
   }
 }
@@ -96,6 +114,10 @@ function departureIn(travels) {
   let timeHour = 0;
   let timeMinute = 0;
   let hour = 0;
+
+//fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+//.then(response => response.json())
+//.then(data => {
 
   for (let i = departure.getMinutes(); i < arrival.getMinutes(); i++) {
     timeMinute++;

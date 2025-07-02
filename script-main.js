@@ -61,3 +61,24 @@ document.querySelector('#btn-booking').addEventListener('click',
  }
 );
 
+function fetchArrayTravel() { //J'aime les commentaires
+
+  //fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+  //.then(response => response.json())
+  //.then(data => {
+    
+    for (let i = 0; i < data.trips; i++) {
+      console.log("Departure =>", data.trips.departure);
+      innertHTML += <> `${data.trips.departure}`</>
+    }
+  }//)
+//}
+
+fetchArrayTravel()
+
+
+document.querySelector('#btn-search').addEventListener('click',
+  function () {
+   document.location.href = "index-cart.html";
+ }
+);

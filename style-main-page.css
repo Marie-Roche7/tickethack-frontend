@@ -1,3 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
   margin: 0;
   background-image: url("./images/background.jpg");
@@ -45,12 +50,6 @@ body {
   padding-bottom: 15%;
 }
 
-.departurearrival {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
 
 .title {
   display: flex;
@@ -114,6 +113,17 @@ h5 {
   font-size: 15px;
 }
 
+#btn-cart  a {
+ color: black;
+text-decoration: none;
+}
+
+#btn-booking  a {
+ color: black;
+text-decoration: none;
+}
+
+
 #btn-booking {
   padding-left: 20px;
   border: none;
@@ -146,9 +156,7 @@ h5 {
   width: 50%;
 }*/
 
-#start {
-  width: 100%;
-}
+
 
 h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -156,31 +164,6 @@ h6 {
   color: rgb(94, 93, 93);
 }
 
-li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-}
-
-p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(236, 236, 236);
-  border-radius: 5px;
-  width: 80%;
-  height: 100%;
-  padding: 5px;
-}
 
 #btn-book {
   background-color: #68a593;
@@ -192,9 +175,92 @@ ul {
   border-radius: 5px;
 }
 
-.liste {
+.liste ul li  {
+display: flex;
+justify-content: space-between;
+padding: 15px;
+background-color: rgb(227, 227, 227);
+margin: 10px;
+border-radius: 7px;
+}
+
+.lamort {
+display: flex;
+gap: 100px;
+}
+
+.lamort .recherche {
+background-color: rgb(255, 255, 255);
+ border-radius: 7px;
+
+}
+
+.lamort .result {
+background-color: rgb(255, 255, 255);
+overflow-y: scroll;
+}
+
+.lamort .recherche,
+.lamort .result {
+width: 300px;
+height: 350px;
+ border-radius: 7px;
+}
+
+.recherche-top {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+}
+
+#start {
+  margin-top: 50px;
+}
+
+.paddingstp {
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+ margin: 30px;
+  height: 80%;
+}
+
+#departure, #arrival, #start {
+  padding: 5px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  background-color: rgb(236, 236, 236);
+}
+
+.border {
+border-bottom: 1px black solid;
+width: 98%;
+margin: auto;
+}
+
+.btn {
+  background-color: #68a593;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 0px;
+}
+
+.result ul li {
+  display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+background-color: #e8e8e8;
+margin: 10px;
+border-radius: 7px;
+}
+
+.veutmourrir {
+  margin: 10px;
+  max-height: 80px;
+}
+
+.result ul {
+  padding: 7px;
 }
