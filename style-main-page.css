@@ -164,14 +164,21 @@ li {
   font-size: 15px;
 }
 
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(236, 236, 236);
   border-radius: 5px;
-  width: 85%;
+  width: 80%;
+  height: 100%;
   padding: 5px;
 }
 
