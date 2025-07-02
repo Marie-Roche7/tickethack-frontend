@@ -48,7 +48,8 @@ body {
 .departurearrival {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+
 }
 
 .title {
@@ -67,6 +68,7 @@ body {
 h4 {
   margin: 0;
 }
+
 h3 {
   color: white;
   font-size: 25px;
@@ -102,6 +104,7 @@ h5 {
   border: none;
   border-radius: 2px;
   padding: 5px;
+  width: 100%;
 }
 
 #btn-cart {
@@ -127,13 +130,12 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /*width: 50%;*/
+  width: 20%;
 }
 
 .left-side {
   padding-left: 45px;
   padding-right: 45px;
-  width: 15%;
 }
 
 .right-side {
