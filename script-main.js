@@ -9,3 +9,4 @@ document.querySelector('#btn-booking').addEventListener('click',
    document.location.href = "index-booking.html";
  }
 );
+
