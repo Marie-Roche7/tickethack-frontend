@@ -66,7 +66,7 @@ document.querySelector(".btn").addEventListener("click", function () {
       console.log(data);
       for (let i = 0; i < data.length; i++) {
         console.log(data[i]);
-        document.querySelector('.jeveuxmourirencoreplus').innerHTML += 
+        document.querySelector('.trip-summary').innerHTML +=
         `<li>
                     <p>${data[i].departure}>${data[i].arrival}</p>
                     <p>${data[i].date}</p>
@@ -74,7 +74,7 @@ document.querySelector(".btn").addEventListener("click", function () {
                     <button type="button" id="btn-book">Book</button>
                   </li>`
       }
-      
+
     })
 
 });

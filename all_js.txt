@@ -1,0 +1,1189 @@
+Arborescence (profondeur max 4, sans node_modules) :
+.
+├── all_js.txt
+├── images
+│   ├── background.jpg
+│   ├── notfound.png
+│   └── train.png
+├── index-booking.html
+├── index-cart.html
+├── index-main-page.html
+├── script-booking.js
+├── script-cart.js
+├── script-main.js
+├── style-booking.css
+├── style-cart.css
+└── style-main-page.css
+
+2 directories, 13 files
+
+
+
+# ./index-booking.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-booking.css" />
+    <title>TicketHack</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <!--contient l'intégralité de la page-->
+      <div class="cell" id="header">
+        <!--header de la page-->
+        <div id="logo-container">
+          <h4 class="logo">Tickethack</h4>
+        </div>
+        <div class="cartbooking">
+          <!--boutons header-->
+          <div id="cart">
+            <button type="button" id="btn-cart">Cart</button>
+          </div>
+          <div id="booking">
+            <button type="button" id="btn-booking">Bookings</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell" id="content">
+        <!--contient le milieu de page-->
+
+        <div id="content-cart">
+          <div class="my-cart">
+            <!--coté gauche de la page-->
+            <p>My bookings</p>
+            <div class="row">
+              <div class="text-container">
+                <div>
+                  <p class="destination">Paris>Marseille</p>
+                </div>
+                <div>
+                  <p class="horaire">20:37</p>
+                </div>
+                <div>
+                  <p class="prix">107€</p>
+                </div>
+              </div>
+              <div>
+              <p class="departure">Departure in 5 hours</p>
+              </div>
+            </div>
+            <div class="enjoy">
+              <p class="enjoyyourtravel">Enjoy your travels with Tickethack!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script-booking.js"></script>
+  </body>
+</html>
+
+# ./index-booking.html
+
+# ./index-cart.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-cart.css" />
+    <title>TicketHack</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <!--contient l'intégralité de la page-->
+      <div class="cell" id="header">
+        <!--header de la page-->
+        <div id="logo-container">
+          <h4 class="logo">Tickethack</h4>
+        </div>
+        <div class="cartbooking">
+          <!--boutons header-->
+          <div id="cart">
+            <button type="button" id="btn-cart">Cart</button>
+          </div>
+          <div id="booking">
+            <button type="button" id="btn-booking">Bookings</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell" id="content">
+        <!--contient le milieu de page-->
+
+        <div id="content-cart">
+          <div class="my-cart">
+            <!--coté gauche de la page-->
+            <p>My cart</p>
+            <div class="row">
+              <div class="text-container">
+                <div>
+                  <p class="destination">Paris>Marseille</p>
+                </div>
+                <div>
+                  <p class="horaire">20:37</p>
+                </div>
+                <div>
+                  <p class="prix">107€</p>
+                </div>
+              </div>
+              <div class="croix">
+              <div id="delete">
+              <span class="delete">✖</span>
+              </div>
+              </div>
+            </div>
+            <div class="total">
+              <p class="totalprice">Total: 107€</p>
+              <button type="button" id="btn-purchase">Purchase</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script-cart.js"></script>
+  </body>
+</html>
+
+# ./index-cart.html
+
+# ./index-main-page.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-main-page.css" />
+    <title>TicketHack</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <!--contient l'intégralité de la page-->
+      <div class="cell" id="header">
+        <!--header de la page-->
+        <div id="logo-container">
+          <h4 class="logo">Tickethack</h4>
+        </div>
+        <div class="cartbooking">
+          <!--boutons header-->
+          <div id="cart">
+            <button type="button" id="btn-cart"><a href="index-cart.html">Cart</a></button>
+          </div>
+          <div id="booking">
+            <button type="button" id="btn-booking"><a href="index-booking.html">Bookings</a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell" id="content">
+        <!--contient le milieu de page-->
+        <div class="title">
+          <h3>Explore the world effortlessly by train!</h3>
+          <h5>
+            Compare, book and enjoy cheap prices for train tickets: your journey
+            starts on Tickethack.
+          </h5>
+        </div>
+
+        <div class="lamort">
+          <div class="recherche">
+            <div class="paddingstp">
+              <div class="recherche-top">
+                <input id="departure" type="text" placeholder="Departure" />
+                <div class="border"></div>
+                <input id="arrival" type="text" placeholder="Arrival" />
+                <input
+                  type="date"
+                  id="start"
+
+                />
+              </div>
+              <button type="button" class="btn">Search</button>
+            </div>
+          </div>
+
+          <div class="result">
+            <div class="trip-thumb">
+            <ul class="trip-summary">
+                  <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+             <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="searchfound">
+          <div class="left-side">
+            <div class="departurearrival">
+              <div>
+                <input id="departure" type="text" placeholder="Departure" />
+              </div>
+              <div>
+                <input id="arrival" type="text" placeholder="Arrival" />
+              </div>
+            </div>
+
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value="2025-07-01"
+              min="2025-07-01"
+              max="2030-12-31"
+            />
+
+            <button type="button" id="btn-search">Search</button>
+          </div>
+
+          <div id="found">
+            <div class="right-side">
+              <div class="liste">
+                <ul>
+                  <li>
+                    <p>Paris>Lyon</p>
+                    <p>16:13</p>
+                    <p>135€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>
+
+                </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  -->
+      </div>
+      <!--pas de footer!-->
+    </div>
+    <script src="script-main.js"></script>
+  </body>
+</html>
+
+# ./index-main-page.html
+
+# ./script-booking.js
+document.querySelector('#logo-container').addEventListener('click',
+  function () {
+   document.location.href = "index-main-page.html";
+ }
+);
+
+document.querySelector('#btn-cart').addEventListener('click',
+  function () {
+   document.location.href = "index-cart.html";
+ }
+);
+# ./script-booking.js
+
+# ./script-cart.js
+console.log("arrivee dans cart");
+
+fetch("url")
+  .then()
+  .then((data) => {});
+
+const travels = [
+  { departure: "Lyon", arrival: "Marseille", horaire: "13:50", prix: 111 },
+  {
+    departure: "Lyon",
+    arrival: "Paris",
+    horaire: "19:37",
+    prix: 130,
+  },
+  {
+    departure: "Paris",
+    arrival: "Grenoble",
+    horaire: "19:55",
+    prix: 94,
+  },
+  {
+    departure: "Grenoble",
+    arrival: "Toulouse",
+    horaire: "17:22",
+    prix: 135,
+  },
+  {
+    departure: "Marseille",
+    arrival: "Grenoble",
+    horaire: "10:50",
+    prix: 77,
+  },
+  {
+    departure: "Grenoble",
+    arrival: "Marseille",
+    horaire: "12:54",
+    prix: 125,
+  },
+  {
+    departure: "Lyon",
+    arrival: "Grenoble",
+    horaire: "17:30",
+    prix: 88,
+  },
+  {
+    departure: "Paris",
+    arrival: "Grenoble",
+    horaire: "13:06",
+    prix: 25,
+  },
+];
+
+
+function fetchNewArrayFromDB() { //J'aime les commentaires
+
+  fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+  .then(response => response.json())
+  .then(data => {
+
+    for (let i = 0; i < data.trips; i++) {
+      console.log("Departure =>", data.trips.departure);
+      innertHTML += <> `${data.trips.departure}`</>
+    }
+  })
+}
+
+fetchNewArrayFromDB()
+
+
+document
+  .querySelector("#logo-container")
+  .addEventListener("click", function () {
+    document.location.href = "index-main-page.html";
+  });
+
+document.querySelector("#btn-booking").addEventListener("click", function () {
+  document.location.href = "index-booking.html";
+});
+
+document.querySelector("#delete").addEventListener("click", function () {
+  console.log("click detected on delete!");
+});
+
+/*console.log(travels)*/
+
+function deleteTravel() {
+  // for (let element of document.querySelectorAll('#delete')) {
+  //   element.addEventListener("click", "tatata")
+  // }
+//fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+//.then(response => response.json())
+//.then(data => {
+  for (let i = 0; i < document.querySelectorAll("#delete").length; i++) {
+    document
+      .querySelectorAll("#delete")
+      [i].addEventListener("click", function () {
+        // fetch(`http://localhost:3000/.../${this.id}`, { method: "DELETE" })
+        //   .then((response) => response.json())
+        //   .then((data) => {
+        //     if (data.result) {
+        this.parentNode.parentNode.remove();
+        //     }
+        //   });
+        console.log("la mort");
+      });
+  }
+}
+
+function departureIn(travels) {
+  let result = "";
+
+  const departure = new Date(travels.departure);
+  const arrival = new Date(travels.arrival);
+  let timeHour = 0;
+  let timeMinute = 0;
+  let hour = 0;
+
+//fetch("http://localhost:3000/jaimelestableaux/masuperroutequirenvoieuntableau")
+//.then(response => response.json())
+//.then(data => {
+
+  for (let i = departure.getMinutes(); i < arrival.getMinutes(); i++) {
+    timeMinute++;
+    if (departure.getHours() + timeHour !== arrival.getHours()) {
+      timeMinute += 60;
+      timeHour++;
+    }
+    result = `Departure in ${timeHour} hours and ${timeMinute} minutes`;
+  }
+
+  console.log(result);
+
+  return result;
+}
+
+# ./script-cart.js
+
+# ./script-main.js
+const travels = [
+  { departure: "Lyon", arrival: "Marseille", horaire: "13:50", prix: 111 },
+  {
+    departure: "Lyon",
+    arrival: "Paris",
+    horaire: "19:37",
+    prix: 130,
+  },
+  {
+    departure: "Paris",
+    arrival: "Grenoble",
+    horaire: "19:55",
+    prix: 94,
+  },
+  {
+    departure: "Grenoble",
+    arrival: "Toulouse",
+    horaire: "17:22",
+    prix: 135,
+  },
+  {
+    departure: "Marseille",
+    arrival: "Grenoble",
+    horaire: "10:50",
+    prix: 77,
+  },
+  {
+    departure: "Grenoble",
+    arrival: "Marseille",
+    horaire: "12:54",
+    prix: 125,
+  },
+  {
+    departure: "Lyon",
+    arrival: "Grenoble",
+    horaire: "17:30",
+    prix: 88,
+  },
+  {
+    departure: "Paris",
+    arrival: "Grenoble",
+    horaire: "13:06",
+    prix: 25,
+  },
+];
+
+document.querySelector("#btn-cart").addEventListener("click", function () {
+  document.location.href = "index-cart.html";
+});
+
+document.querySelector("#btn-booking").addEventListener("click", function () {
+  document.location.href = "index-booking.html";
+});
+
+
+
+
+document.querySelector(".btn").addEventListener("click", function () {
+  const departure = document.querySelector("#departure").value;
+  const arrival = document.querySelector("#arrival").value;
+  const start = document.querySelector("#start").value;
+
+  fetch(`http://localhost:3000/trips/search/${departure}/${arrival}/${start}`)
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i]);
+        document.querySelector('.trip-summary').innerHTML +=
+        `<li>
+                    <p>${data[i].departure}>${data[i].arrival}</p>
+                    <p>${data[i].date}</p>
+                    <p>${data[i].price}€</p>
+                    <button type="button" id="btn-book">Book</button>
+                  </li>`
+      }
+
+    })
+
+});
+
+# ./script-main.js
+
+# ./style-booking.css
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #e7e7e7;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 15px;
+  width: 70vw;
+  background-color: #f3f3f3;
+  /*margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 7px;*/
+}
+
+
+.cell {
+  text-align: center;
+}
+
+#header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
+
+.delete {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  margin: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#cart {
+    display: flex;
+}
+
+#header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
+
+.cartbooking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#btn-cart {
+  padding: 0px;
+  border: none;
+  background: none;
+  font-size: 15px;
+}
+
+#btn-booking {
+  padding-left: 20px;
+  border: none;
+  background: none;
+  font-size: 15px;
+}
+
+#btn-purchase {
+  background-color: #68a593;
+  color: white;
+  padding: 0px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  height: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  color: #68a593;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+#content-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.total {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-row-start: 2;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+.my-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+.enjoy {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.enjoyyourtravel {
+    color: #68a593;
+}
+
+
+# ./style-booking.css
+
+# ./style-cart.css
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #e7e7e7;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 15px;
+  width: 70vw;
+  background-color: #f3f3f3;
+  /*margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 7px;*/
+}
+
+
+.cell {
+  text-align: center;
+}
+
+#header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
+
+.delete {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  margin: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#cart {
+    display: flex;
+}
+
+#header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
+
+.cartbooking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#btn-cart {
+  padding: 0px;
+  border: none;
+  background: none;
+  font-size: 15px;
+}
+
+#btn-booking {
+  padding-left: 20px;
+  border: none;
+  background: none;
+  font-size: 15px;
+}
+
+#btn-purchase {
+  background-color: #68a593;
+  color: white;
+  padding: 0px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  height: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  color: #68a593;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+#content-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.total {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-row-start: 2;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+.my-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+.total {
+    background-color: #051544;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.totalprice {
+    color: white;
+}
+
+#delete {
+    padding: 5px;
+    background-color: #68a593;
+    border-radius: 7px;
+}
+
+.croix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+# ./style-cart.css
+
+# ./style-main-page.css
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	margin: 0;
+	background-image: url("./images/background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	overflow: hidden;
+}
+
+#container {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+}
+
+.cell {
+	text-align: center;
+}
+
+#header {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: white;
+}
+
+#content {
+	grid-row-start: 2;
+	grid-row-end: 13;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 15%;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.cartbooking {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+h4 {
+	margin: 0;
+}
+
+h3 {
+	color: white;
+	font-size: 25px;
+	/*text-shadow: 1px 0 0 #878787, 0 -1px 0 #878787, 0 1px 0 #878787, -1px 0 0 #878787;*/
+}
+
+h5 {
+	color: white;
+	font-weight: lighter;
+	font-size: 17px;
+	/*text-shadow: 1px 0 0 #878787, 0 -1px 0 #878787, 0 1px 0 #878787, -1px 0 0 #878787;*/
+}
+
+#searchfound {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 80%;
+	height: 100%;
+}
+
+.logo {
+	color: #68a593;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+}
+
+#btn-search {
+	background-color: #68a593;
+	color: white;
+	padding: 0px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+	width: 100%;
+}
+
+#btn-cart {
+	padding: 0px;
+	border: none;
+	background: none;
+	font-size: 15px;
+}
+
+#btn-cart a {
+	color: black;
+	text-decoration: none;
+}
+
+#btn-booking a {
+	color: black;
+	text-decoration: none;
+}
+
+#btn-booking {
+	padding-left: 20px;
+	border: none;
+	background: none;
+	font-size: 15px;
+}
+
+.left-side,
+.right-side {
+	background-color: #ffffff;
+	display: inline-block;
+	height: 300px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 20%;
+}
+
+.left-side {
+	padding-left: 45px;
+	padding-right: 45px;
+}
+
+.right-side {
+	width: 150%;
+}
+
+/*.train {
+  width: 50%;
+}*/
+
+h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: rgb(94, 93, 93);
+}
+
+#btn-book {
+	background-color: #68a593;
+	color: white;
+	padding: 0px;
+	border: none;
+	border-radius: 2px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.liste ul li {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	background-color: rgb(227, 227, 227);
+	margin: 10px;
+	border-radius: 7px;
+}
+
+.lamort {
+	display: flex;
+	gap: 100px;
+}
+
+.lamort .recherche {
+	background-color: rgb(255, 255, 255);
+	border-radius: 7px;
+}
+
+.lamort .result {
+	background-color: rgb(255, 255, 255);
+	overflow-y: scroll;
+}
+
+.lamort .recherche,
+.lamort .result {
+	width: 300px;
+	height: 350px;
+	border-radius: 7px;
+}
+
+.recherche-top {
+	display: flex;
+	flex-direction: column;
+}
+
+#start {
+	margin-top: 50px;
+}
+
+.paddingstp {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 30px;
+	height: 80%;
+}
+
+#departure,
+#arrival,
+#start {
+	padding: 5px;
+	border-radius: 7px;
+	outline: none;
+	border: none;
+	background-color: rgb(236, 236, 236);
+}
+
+.border {
+	border-bottom: 1px black solid;
+	width: 98%;
+	margin: auto;
+}
+
+.btn {
+	background-color: #68a593;
+	color: white;
+	border: none;
+	border-radius: 7px;
+	padding: 5px 0px;
+}
+
+.result ul li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #e8e8e8;
+	margin: 10px;
+	border-radius: 7px;
+}
+
+.trip-thumb {
+	margin: 10px;
+	max-height: 80px;
+}
+
+.result ul {
+	padding: 7px;
+}
+
+# ./style-main-page.css
+
+
+Liste des fichiers trouvés et concaténés :
+./index-booking.html
+./index-cart.html
+./index-main-page.html
+./script-booking.js
+./script-cart.js
+./script-main.js
+./style-booking.css
+./style-cart.css
+./style-main-page.css
