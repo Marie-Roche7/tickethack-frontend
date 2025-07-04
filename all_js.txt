@@ -191,7 +191,7 @@ Arborescence (profondeur max 4, sans node_modules) :
           </h5>
         </div>
 
-        <div class="lamort">
+        <div class="search-and-results">
           <div class="recherche">
             <div class="paddingstp">
               <div class="recherche-top">
@@ -208,7 +208,7 @@ Arborescence (profondeur max 4, sans node_modules) :
             </div>
           </div>
 
-          <div class="result">
+          <div class="results-box">
             <div class="trip-thumb">
             <ul class="trip-summary">
                   <li>
@@ -1092,23 +1092,23 @@ h6 {
 	border-radius: 7px;
 }
 
-.lamort {
+.search-and-results {
 	display: flex;
 	gap: 100px;
 }
 
-.lamort .recherche {
+.search-and-results .recherche {
 	background-color: rgb(255, 255, 255);
 	border-radius: 7px;
 }
 
-.lamort .result {
+.search-and-results .results-box {
 	background-color: rgb(255, 255, 255);
 	overflow-y: scroll;
 }
 
-.lamort .recherche,
-.lamort .result {
+.search-and-results .recherche,
+.search-and-results .result-box {
 	width: 300px;
 	height: 350px;
 	border-radius: 7px;
@@ -1155,7 +1155,7 @@ h6 {
 	padding: 5px 0px;
 }
 
-.result ul li {
+.results-box ul li {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1170,7 +1170,7 @@ h6 {
 	max-height: 80px;
 }
 
-.result ul {
+.result-box ul {
 	padding: 7px;
 }
 

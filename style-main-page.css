@@ -179,23 +179,23 @@ h6 {
 	border-radius: 7px;
 }
 
-.lamort {
+.search-and-results {
 	display: flex;
 	gap: 100px;
 }
 
-.lamort .recherche {
+.search-and-results .recherche {
 	background-color: rgb(255, 255, 255);
 	border-radius: 7px;
 }
 
-.lamort .result {
+.search-and-results .results-box {
 	background-color: rgb(255, 255, 255);
 	overflow-y: scroll;
 }
 
-.lamort .recherche,
-.lamort .result {
+.search-and-results .recherche,
+.search-and-results .result-box {
 	width: 300px;
 	height: 350px;
 	border-radius: 7px;
@@ -242,7 +242,7 @@ h6 {
 	padding: 5px 0px;
 }
 
-.result ul li {
+.results-box ul li {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -257,6 +257,6 @@ h6 {
 	max-height: 80px;
 }
 
-.result ul {
+.result-box ul {
 	padding: 7px;
 }
